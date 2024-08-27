@@ -1,4 +1,19 @@
-## Heritige Housing
+# Heritige Housing
+
+# Contents
+1. [Dataset Content](#dataset-content)
+2. [Business Requirements](#business-requirements)
+3. [Hypothesis and validations](#hypothesis-and-how-to-validate)
+4. [ML business case](#machine-learning-business-case)
+5. [Dashboard Design](#dashboard-design)
+6. [Deployment](#deployment)
+7. [Unfixed Bugs](#unfixed-bugs)
+8. [Fixed Bugs](#fixed-bugs)
+9. [Testing](#testing)
+10. [Media](#media)
+11. [Credits](#credits)
+12. [Acknowledgements](#acknowledgements-optional)
+
 ## How to use this repo
 
 1. Use this template to create your GitHub project repo
@@ -65,7 +80,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
-## Business Requirements
+# Business Requirements
 
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
 
@@ -193,6 +208,15 @@ Implementing a machine learning model to predict house prices will empower the c
 ## Unfixed Bugs
 
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+## Potential Problems
+As i may have to connect to the Code institute custom database, there may be an issue with seeing the application incase the CI database has any issues or potential problems which could cause me to not be able to get all of the application built.
+## Fixed Bugs
+
+## Testing
+This section is all about the tests i have performed to the application manually and via different browsers.
+### Manual Testing
+
+### Browser Testing
 
 ## Deployment
 
