@@ -1,18 +1,21 @@
 # Heritige Housing
 
 # Contents
-1. [Dataset Content](#dataset-content)
-2. [Business Requirements](#business-requirements)
-3. [Hypothesis and validations](#hypothesis-and-how-to-validate)
-4. [ML business case](#machine-learning-business-case)
-5. [Dashboard Design](#dashboard-design)
-6. [Deployment](#deployment)
-7. [Unfixed Bugs](#unfixed-bugs)
-8. [Fixed Bugs](#fixed-bugs)
-9. [Testing](#testing)
-10. [Media](#media)
-11. [Credits](#credits)
-12. [Acknowledgements](#acknowledgements-optional)
+1. [Design](#design)
+2. [User Stories]()
+3. [Dataset Content](#dataset-content)
+4. [Business Requirements](#business-requirements)
+5. [Hypothesis and validations](#hypothesis-and-how-to-validate)
+6. [ML business case](#machine-learning-business-case)
+7. [Dashboard Design](#dashboard-design)
+8. [Deployment](#deployment)
+9. [Unfixed Bugs](#unfixed-bugs)
+10. [Fixed Bugs](#fixed-bugs)
+11. [Testing](#testing)
+12. [contributing](#contributing)
+13. [Media](#media)
+14. [Credits](#credits)
+15. [Acknowledgements](#acknowledgements-optional)
 
 ## How to use this repo
 
@@ -47,6 +50,8 @@ To log into the Heroku toolbelt CLI:
 5. Paste in your API key when asked
 
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
+
+## Design
 
 ## Dataset Content
 
@@ -247,6 +252,8 @@ This section is all about the tests i have performed to the application manually
 * The text for the Home page was taken from Wikipedia Article A
 * Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 * The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+
+## Contributing
 
 ### Media
 
