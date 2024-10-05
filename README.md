@@ -101,6 +101,7 @@ There is more than 1 hypothesis to consider with this. See below for my hypothes
 
 **Reasoning:** Generally, larger homes tend to sell for more because they offer more living space, which is a key factor in determining property value.
 **Validation:** This can be validated by analyzing the correlation between the total square footage (including above-ground living area and basement) and the sale price. A positive correlation would support this hypothesis. We will create scatter plots and compute correlation coefficients to visualize and quantify the relationship.
+
 ### Hypothesis 2: Location Significantly Affects House Prices
 
 **Reasoning:** The location of a house often has a significant impact on its price, with certain neighborhoods or proximity to amenities being more desirable and, therefore, more expensive.
