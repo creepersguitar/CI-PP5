@@ -84,6 +84,17 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 |YearBuilt|Original construction date|1872 - 2010|
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
+## reasons behind dataset
+The dataset contains various features that describe the characteristics of homes in Ames, Iowa, such as the total square footage, overall quality rating, garage area, year built, and neighborhood. The goal is to predict the sale price of a house based on these features, addressing the business problem of accurately valuing properties. This aligns with the CRISP-DM framework's "Business Understanding" phase, where the objective is to gain insight into property valuation trends to support homeowners, buyers, and real estate agents in making informed decisions.
+
+The dataset features include:
+
+- Total Square Footage (TotalSF): Indicates the overall living space in the house.
+- Overall Quality (OverallQual): Measures the material and finish of the house, rated on a scale.
+- Garage Area (GarageArea): Reflects the size of the garage.
+- Year Built (YearBuilt): The construction year, representing the house's age.
+- Neighborhood: The geographical location, influencing the property's market value.
+- The business requirement is to provide an accurate and data-driven valuation tool for real estate transactions in Ames.
 
 # Business Requirements
 
@@ -170,41 +181,60 @@ Summary
 Machine Learning Tasks focus on building, validating, and fine-tuning predictive models that can accurately estimate house prices based on the identified features, ensuring that the client can make informed pricing decisions for the inherited properties.
 
 ## Machine Learning Business Case
+
 ### Business Objective
-The client needs to maximize the sale prices of four inherited properties in Ames, Iowa. Given her familiarity with property prices in her own state, she is concerned about accurately pricing these properties in a different market. The client seeks a data-driven approach to understand the factors that influence house prices in Ames and to predict the sale prices of these properties accurately.
+The client aims to maximize the sale prices of four inherited properties in Ames, Iowa. Since she is unfamiliar with the local market, a data-driven approach will help understand the key factors influencing house prices and enable accurate pricing for these properties. This will minimize the risk of financial loss due to overpricing or underpricing.
 
 ### Problem Statement
-The client requires an accurate prediction of the sale prices for the four inherited houses in Ames, Iowa, to ensure they are competitively priced in the market. Incorrect pricing, whether too high or too low, could result in significant financial losses—either through missed sales opportunities or undervaluing the properties.
+Accurate prediction of house sale prices is crucial for pricing the properties competitively. Without understanding the Ames real estate market, there is a risk of setting inappropriate prices, potentially leading to prolonged time on the market (if overpriced) or lost revenue (if underpriced). The predictive model will help the client achieve market-aligned pricing.
 
 ### ML Solution Overview
-We propose developing a predictive model using machine learning techniques to estimate house sale prices in Ames, Iowa. The model will be trained on historical house sale data from Ames, incorporating various house attributes (e.g., size, location, quality, year built) to learn patterns and relationships that determine sale prices. This model will then be used to predict the sale prices of the inherited properties.
+The solution involves building a machine learning model using historical real estate data from Ames. By incorporating features such as square footage, quality, garage area, year built, and neighborhood, the model will learn the relationships that influence house prices. The model will then predict the prices for the inherited properties based on these attributes.
 
-### Expected Benefits
-Accurate Pricing: By predicting sale prices using a data-driven model, the client can ensure that the inherited properties are priced accurately, maximizing potential revenue.
-Market Understanding: The model will provide insights into which features most influence house prices in Ames, helping the client better understand this new market.
-Competitive Advantage: Accurate pricing will give the client a competitive edge in the Ames real estate market, potentially leading to quicker sales and higher returns.
-Key Metrics for Success
-R-squared (R²): Measures the proportion of variance in the sale price that can be explained by the model. A higher R² indicates a better fit of the model.
-Root Mean Squared Error (RMSE): Provides a measure of the average error in predicting the sale price. Lower RMSE values indicate more accurate predictions.
-Mean Absolute Error (MAE): Reflects the average magnitude of errors in the predictions. Lower MAE values indicate better model performance.
-Risks and Considerations
-Data Quality: Incomplete or inaccurate data could lead to poor model performance. Careful data cleaning and preprocessing are essential.
-Overfitting: The model might perform well on training data but poorly on unseen data. This risk will be mitigated through cross-validation and regularization techniques.
-Market Changes: The model is based on historical data and may not fully account for future market changes or trends, so ongoing model updates might be necessary.
-Implementation Plan
-Data Collection and Preprocessing: Gather and clean the historical house sale data from Ames, Iowa, ensuring all relevant features are included.
-Exploratory Data Analysis (EDA): Perform EDA to understand the data distribution, correlations, and potential outliers.
-Model Selection and Training: Train several regression models (e.g., Linear Regression, Random Forest, Gradient Boosting) using the data, selecting the model with the best performance.
-Model Validation and Tuning: Validate the model using a separate test dataset, and fine-tune the model's hyperparameters to optimize performance.
-Prediction and Reporting: Use the final model to predict the sale prices of the inherited houses and generate a report summarizing the findings and recommendations for pricing.
-Monitoring and Maintenance: Regularly monitor the model's performance and update it as needed to reflect any market changes.
+### Learning Method
+Several regression techniques will be used to identify the most effective model. Potential algorithms include:
+- **Linear Regression** for its simplicity in providing a baseline.
+- **Random Forest** for handling non-linear relationships.
+- **Gradient Boosting** for improving predictive accuracy through ensemble learning.
+
+### Ideal Outcome
+The model should accurately estimate sale prices, reducing the difference between predicted and actual sale prices, which will ensure competitive pricing.
+
+### Success Metrics
+Key performance indicators for evaluating the model include:
+- **R-squared (R²)**: Should be high, indicating that the model explains a significant portion of the price variance.
+- **Root Mean Squared Error (RMSE)**: Should be low, reflecting a small average prediction error.
+- **Mean Absolute Error (MAE)**: Should also be minimized, indicating accurate predictions across the board.
+
+### Model Output and Relevance
+The model's output—predicted sale prices—will guide the client in setting listing prices. These predictions help understand how various factors, such as location and house quality, impact pricing, offering valuable market insights.
+
+### Heuristics and Training Data
+Historical data from the Ames housing market, containing features like "Total Square Footage" and "Neighborhood," will be used. Important steps include:
+- Data cleaning to handle missing values.
+- Feature selection based on correlation analysis.
+- Cross-validation to prevent overfitting.
+
+### Risks and Considerations
+- **Data Quality**: Incomplete or erroneous data may degrade model accuracy. Preprocessing will be necessary.
+- **Overfitting**: Regularization and cross-validation techniques will help avoid fitting the model too closely to the training data.
+- **Market Changes**: The model's predictions are based on past trends, which may not fully reflect future shifts. Periodic updates to the model may be required.
+
+### Implementation Plan
+1. **Data Collection and Preprocessing**: Clean historical data and engineer relevant features.
+2. **Exploratory Data Analysis (EDA)**: Investigate data distributions, correlations, and outliers.
+3. **Model Selection and Training**: Train multiple models, selecting the best one based on validation performance.
+4. **Model Validation and Hyperparameter Tuning**: Optimize the selected model using techniques like grid search.
+5. **Prediction and Reporting**: Use the trained model to predict sale prices, providing a report with insights.
+6. **Monitoring and Maintenance**: Regularly track the model's performance and update it as new data becomes available.
 
 ### Cost-Benefit Analysis
+- **Costs**: Include time for data collection, model development, and deployment.
+- **Benefits**: Consist of increased revenue from accurate pricing, lower risk of financial loss, and better market insights.
 
-Costs: Time and resources for data collection, model development, and maintenance.
-Benefits: Increased revenue from accurately priced properties, reduced risk of financial losses due to incorrect pricing, and enhanced understanding of the Ames real estate market.
 ### Conclusion
-Implementing a machine learning model to predict house prices will empower the client to price her inherited properties competitively, maximizing potential returns while minimizing the risk of pricing errors. The model will serve as a robust tool to navigate the unfamiliar Ames real estate market confidently.
+The machine learning model will enable the client to price the inherited properties competitively, leveraging data insights to maximize potential returns while reducing the risk of pricing errors. This solution will provide confidence and a strategic advantage in navigating the Ames real estate market.
+
 
 ## Dashboard Design
 
@@ -241,12 +271,22 @@ This section is all about the tests i have performed to the application manually
 
 ## Main Data Analysis and Machine Learning Libraries
 
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+* pandas -
+* os -
+* streamlit -
+* numpy -
+* seaborn -
+* matplotlib.pyplot -
+* plotly.express -
+* sklearn.model_selection -
+* sklearn.ensemble -
+* sklearn.linear_model -
+* sklearn.metrics -
+* sklearn.preprocessing -
 
 ## Credits
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-* You can break the credits section up into Content and Media, depending on what you have included in your project.
+* In this section i am referencing where all of my content and media came from to avoid plagerism and having to resubmit this project.
 
 ### Content
 
@@ -261,5 +301,8 @@ This section is all about the tests i have performed to the application manually
 * The photos used on the home and sign-up page are from This Open Source site
 * The images used for the gallery page were taken from this other open-source site
 
-## Acknowledgements (optional)
+## Acknowledgements
 - My mentor precious Ijege
+- My amazing peers who helped me when times were tough
+- The 2 project walkthroughs to give me insight as to how to deploy the application
+- Code institutes assessment criteria (to help me double check if i have done everything for pass/merit/distinction)
