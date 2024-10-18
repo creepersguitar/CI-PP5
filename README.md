@@ -2,7 +2,7 @@
 
 # Contents
 1. [Design](#design)
-2. [User Stories]()
+2. [User Stories](#user-stories)
 3. [Dataset Content](#dataset-content)
 4. [Business Requirements](#business-requirements)
 5. [Hypothesis and validations](#hypothesis-and-how-to-validate)
@@ -52,6 +52,64 @@ To log into the Heroku toolbelt CLI:
 You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
 
 ## Design
+
+The design of this project follows a structured approach that aligns with the CRISP-DM framework (Cross-Industry Standard Process for Data Mining). It ensures that the solution is tailored to the business requirements and supports user goals through data analysis, visualization, and predictive modeling.
+
+### Design Objectives
+1. **Understand Key Factors Influencing House Prices**:
+   - Provide visualizations and insights into the factors affecting house sale prices in Ames, Iowa.
+
+2. **Accurate Price Prediction for Real Estate**:
+   - Develop a predictive model to estimate the sale price of properties accurately based on various features.
+
+### Design Approach
+1. **Data Understanding**:
+   - Explore and clean the dataset to understand key attributes influencing house prices.
+   - Perform exploratory data analysis (EDA) to identify relationships and patterns.
+
+2. **Data Preparation**:
+   - Handle missing values and outliers to ensure the quality of the data.
+   - Feature engineering to transform raw data into meaningful inputs for the predictive model.
+
+3. **Modeling**:
+   - Train multiple regression models to find the best-performing algorithm for predicting house prices.
+   - Use feature importance analysis to identify the most influential factors.
+
+4. **Evaluation**:
+   - Assess model accuracy using metrics like R-squared, RMSE, and MAE.
+   - Validate the model through cross-validation to ensure robustness.
+
+5. **Deployment**:
+   - Deploy the model using a web-based interface where users can input house features to get price predictions.
+   - Design a dashboard for visualizing house market trends and predictive analysis.
+
+### Key Components
+1. **Exploratory Data Analysis (EDA)**:
+   - Scatter plots, correlation matrices, and box plots to reveal relationships between variables.
+
+2. **Machine Learning Modeling**:
+   - Linear regression, Random Forest, and Gradient Boosting models are considered.
+   - Hyperparameter tuning for optimal model performance.
+
+3. **Web-Based Dashboard**:
+   - Interactive visualizations for users to explore house prices and model predictions.
+   - Inputs for predicting house prices based on user-provided features.
+
+## User Stories
+
+To ensure the project aligns with the business requirements, several user stories have been identified. These stories help to bridge the business needs with the predictive analytics and visualizations in the project.
+
+1. **As a homeowner in Ames, Iowa, I want to understand which house features are most important in determining sale prices so that I can prioritize renovations to increase the value of my property.**
+
+2. **As a potential buyer, I want to predict the sale price of a house based on its features, so that I can budget effectively and make informed purchasing decisions.**
+
+3. **As a real estate agent, I want to identify trends in house pricing across different neighborhoods in Ames, Iowa, so that I can provide accurate market insights to my clients.**
+
+4. **As a data analyst, I want to build and validate a predictive model that estimates house prices accurately, so I can offer data-driven recommendations to stakeholders.**
+
+5. **As a financial advisor, I want to understand the impact of house conditions and features on market value, so that I can provide better investment advice to clients looking to buy or sell real estate.**
+
+These user stories outline the various stakeholders involved and their objectives, ensuring that the project caters to different perspectives and needs.
 
 ## Dataset Content
 
@@ -247,7 +305,7 @@ The machine learning model will enable the client to price the inherited propert
 ## Potential Problems
 As i may have to connect to the Code institute custom database, there may be an issue with seeing the application incase the CI database has any issues or potential problems which could cause me to not be able to get all of the application built.
 ## Fixed Bugs
-
+The main bugs i have fixed are making sure that each cell of code does not show any errors and outputs something relating to housing.
 ## Testing
 This section is all about the tests i have performed to the application manually and via different browsers.
 ### Manual Testing
@@ -255,7 +313,7 @@ This section is all about the tests i have performed to the application manually
 ### Browser Testing
 
 ## Deployment
-
+This section talks about deploying to heroku
 ### Heroku
 
 * The App live link is: <https://YOUR_APP_NAME.herokuapp.com/>
@@ -271,18 +329,18 @@ This section is all about the tests i have performed to the application manually
 
 ## Main Data Analysis and Machine Learning Libraries
 
-* pandas -
-* os -
-* streamlit -
-* numpy -
-* seaborn -
-* matplotlib.pyplot -
-* plotly.express -
-* sklearn.model_selection -
-* sklearn.ensemble -
-* sklearn.linear_model -
-* sklearn.metrics -
-* sklearn.preprocessing -
+* **pandas** - Used for data manipulation and analysis, especially for handling tabular data in DataFrames.
+* **os** - Provides functions to interact with the operating system, such as file and directory operations.
+* **streamlit** - A web framework for building interactive data applications and visualizations.
+* **numpy** - Supports numerical computations, providing functions for working with arrays and mathematical operations.
+* **seaborn** - A visualization library built on top of Matplotlib, offering enhanced plotting capabilities, especially for statistical graphics.
+* **matplotlib.pyplot** - A foundational library for creating static, interactive, and animated visualizations in Python.
+* **plotly.express** - Allows for the creation of interactive plots and dashboards, making it suitable for dynamic data exploration.
+* **sklearn.model_selection** - Contains functions for splitting data into training and testing sets, as well as for performing cross-validation.
+* **sklearn.ensemble** - Provides ensemble learning algorithms like Random Forest and Gradient Boosting for regression tasks.
+* **sklearn.linear_model** - Implements linear models, including Linear Regression and Ridge Regression, for predictive modeling.
+* **sklearn.metrics** - Offers functions to evaluate the performance of machine learning models using metrics such as R-squared, RMSE, and MAE.
+* **sklearn.preprocessing** - Includes tools for data preprocessing, such as scaling and encoding, to prepare data for machine learning models.
 
 ## Credits
 
